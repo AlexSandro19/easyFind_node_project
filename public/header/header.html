@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/header/header.css">
+    <link rel="stylesheet" href="/footer/footer.css">
+    <link rel="stylesheet" href="/main_page/main_page.css">
+    <link rel="stylesheet" href="/contact/contact.css">
+    <title>EasyFind</title>
+</head>
+<body onload='hideLocations()'>
+<div>
+   <div class="nav-bar">
+        <ul>
+            <li><a href="/"><img id="logo" src="/header/logo.png"></a>
+                <li id="website-name">EasyFind</li>
+            <li>
+                <a class="nav-section" href="/">Locations</a>
+                <ul id="locations">
+                    <li>Denmark
+                        <ul>
+                            <li><a class="nav-city" onclick="start('denmark','copenhagen')">Copenhagen</a></li>
+                            <li><a class="nav-city" onclick="start('denmark','roskilde')">Roskilde</a></li>
+                            <li><a class="nav-city" onclick="start('denmark','arhus')">Århus</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>Sweden
+                        <ul>
+                            <li><a class="nav-city" onclick="start('sweden','stokholm')">Stokholm</a></li>
+                            <li><a class="nav-city" onclick="start('sweden','malmo')">Malmo</a></li>
+                        </ul>
+                    </li>
+                    <li>Norway
+                        <ul>
+                            <li><a class="nav-city" onclick="start('norway','oslo')">Oslo</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a class="nav-section" href="/contact">Join</a></li>
+            <li>Sign In</li>
+            </li>
+        </ul>
+   </div>
+</div>
+<br style=" clear: both;">

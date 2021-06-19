@@ -1,0 +1,35 @@
+<div class="container">
+    <div id="contact">
+        <h1>Contact Me</h1>
+        <form method="POST" action="/contact">
+            <span class="form_contact">
+                <label>Name: </label>
+                <input type="text" name="name" placeholder="name" required>
+            </span>
+            <br>
+            <br>
+            <span class="form_contact">
+                <label>Email: </label>
+                <input type="email" name="email" placeholder="email" required>
+            </span>
+            <br>
+            <br>
+            <span class="form_contact">
+                <label>Subject: </label>
+                <input type="subject" name="subject" placeholder="subject" required>
+            </span>
+            <br>
+            <br>
+            <span class="form_contact">
+                <label >Message: </label>
+                <textarea type="text" name="message" placeholder="write a message here" rows="10" cols="50" required ></textarea>
+            </span>
+            <br>
+            <br>
+            <button type="submit" id="contact-button">SEND</button>
+        </form>
+    </div>
+    
+</div>
+
+<script src="/contact/contact.js"></script>

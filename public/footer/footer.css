@@ -1,0 +1,16 @@
+#footer {
+    background: rgb(140, 226, 145);
+    /* width: 100%; */
+    height: 20px;
+    /* position: fixed;
+    left: 0;
+    bottom: 0; */
+}
+
+#copyright{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+

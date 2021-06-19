@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: none;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  background: hsl(33, 100%, 98%);
+}
+
+#main-content{
+  min-height: calc(100vh - 106px);
+}
+
+.nav-bar > ul li:hover {
+  background: rgb(172, 179, 81);
+}
+
+.nav-bar ul ul {
+  display: none;
+}
+.nav-bar ul li:hover > ul {
+  display: block;
+}
+.nav-bar ul ul ul {
+  margin-left: 170px;
+  top: 0;
+  position: absolute;
+}
+
+.nav-city {
+  color: #fff;
+  text-decoration: none;
+}
+
+#logo {
+  width: 50;
+  height: 50px;
+  overflow: hidden;
+}
+
+.main-content {
+  clear: both;
+}
+
+#map {
+  height: 5px;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#filters {
+  margin: 20px 10px;
+  text-align: center;
+}
+
+#filter-options {
+  margin-top: 10px;
+}
+
+#filter-options > div {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline;
+}
+
+#chat-container {
+  margin: 10px auto 10px auto;
+  padding-bottom: 1px;
+}
+
+.chat {
+  width: 500px;
+  border: black 2px solid;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.received_message {
+  width: 200px;
+  border: black 1px solid;
+  border-radius: 5px;
+  padding: 7px;
+  margin: 5px;
+}
+
+.sent_message {
+  width: 200px;
+  border: black 1px solid;
+  border-radius: 5px;
+  padding: 7px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: 5px;
+}
+/* 
+.sent__message{
+  width:200px;
+  border: black 1px solid;
+  border-radius: 25px;
+} */
+
+.message_form {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.inbox > h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.message_author {
+  font-weight: bold;
+}
+
+.message_form_input {
+  padding: 5px;
+}
+
+.message_form_button {
+  padding: 5px;
+}
+
+
+#places {
+  text-align: center;
+  margin: 20px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}
+
+#places > p {
+  margin: 5px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#places > h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#places_list > li {
+  text-align: left;
+  margin: 20px;
+}
+
+.place {
+  width: 300px;
+  border: black 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+#title {
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.type {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.bike {
+  list-style-type: none;
+  margin: 10px 10px;
+  padding: 5px 5px;
+  border: 1px black solid;
+  border-radius: 7px;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.bike > img {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.bike > h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
