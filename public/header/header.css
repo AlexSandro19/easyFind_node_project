@@ -18,10 +18,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   
+  
 }
 .nav-bar ul {
   list-style: none;
-  margin-top: 1%;
 }
 .nav-bar > ul li {
   background: #e9911f;

@@ -1,3 +1,5 @@
+const base_url = 'http://nodeexamproject-env.eba-tkgknw3b.us-east-1.elasticbeanstalk.com'
+
 // Variables to display the map and contents on it
 let map;
 
@@ -48,7 +50,7 @@ function hideLocations()  {
 
     const URL = window.location.href;
     //console.log(URL);
-    if (URL.localeCompare('http://nodeexamproject-env.eba-tkgknw3b.us-east-1.elasticbeanstalk.com/') !== 0){
+    if (URL.localeCompare(`${base_url}/`) !== 0){
         
         // console.log("checking url");
         document.getElementById("locations").style.visibility="hidden";  
@@ -61,152 +63,8 @@ function hideLocations()  {
 
 async function getData(country, city) {
     
-  /*
-    const places = [
-        {
-            place_id: "111111",
-            coords:{lat:55.6713, lng: 12.5250},
-            place_name: "Testing here",
-            description: "Some text with another text and with more text added to this text and what about that text with these words in it and those letters inside those words",
-            address: "Norreport", 
-            working_hours:"13:00 - 19:00", 
-            nr_bikes: "6",
-            owner_name: "Jonh Jonsen",
-            phone_nr: "32344332",
-            bikes:
-                [
-                    {
-                        bike_id: "111222",
-                        type: "urban_bike",
-                        model: "Trek 3000",
-                        description: "Some description about this bike",
-                        year: "2020",
-                        size: "medium",
-                        speeds: "3x8",
-                        price: {
-                            hour: "50",
-                            day: "200",
-                            week: "500",
-                            month: "1500"
-                        }, 
-                        available:"yes",
-                        images : ["bike1.jpg", "bike2.jpg"]
-                    },
-                    {
-                        bike_id: "222333",
-                        type: "urban_bike",
-                        model: "Canondale 1234",
-                        description: "Some description about this bike",
-                        year: "2010",
-                        size: "medium",
-                        speeds: "3x7",
-                        price: {
-                            hour: "50",
-                            day: "200",
-                            week: "500",
-                            month: "1500"
-                        }, 
-                        available:"yes"
-                    },
-                    {
-                        bike_id: "111222",
-                        type: "mountain_bike",
-                        model: "Trek 3000",
-                        description: "Some description about this bike",
-                        year: 2020,
-                        size: "medium",
-                        speeds: "2x8",
-                        price: {
-                            hour: "50",
-                            day: "200",
-                            week: "500",
-                            month: "1500"
-                        }, 
-                        available:"yes"
-                    },
-                    {
-                        bike_id: "111222",
-                        type: "mountain_bike",
-                        model: "Trek 3000",
-                        description: "Some description about this bike",
-                        year: 2020,
-                        size: "medium",
-                        speeds: "3x9",
-                        price: {
-                            hour: "50",
-                            day: "200",
-                            week: "500",
-                            month: "1500"
-                        }, 
-                        available:"yes"
-                    }
-                ]
-            
-        },
-        {
-            place_id: "222222",
-            coords:{lat:55.667055, lng: 12.407292},
-            place_name: "Testing here 2.0",
-            description: "Some text with another text and with more text added to this text and what about that text with these words in it and those letters inside those words",
-            address: "Frederiksberg", 
-            working_hours:"11:00 - 17:00", 
-            nr_bikes: "4",
-            owner_name: "Stine Petersen",
-            phone_nr: "11111111",
-            bikes:
-                [
-                    {
-                        bike_id: "333444",
-                        type: "urban_bike",
-                        model: "Trek 3000",
-                        description: "Some description about this bike",
-                        year: "2020",
-                        size: "medium",
-                        speeds: "3x8",
-                        price: {
-                            hour: "50",
-                            day: "200",
-                            week: "500",
-                            month: "1500"
-                        }, 
-                        available:"yes",
-                        images : ["bike1.jpg", "bike2.jpg"]
-                    },
-                    {
-                        bike_id: "444555",
-                        type: "road_bike",
-                        model: "Canondale 1234",
-                        description: "Some description about this bike",
-                        year: "2010",
-                        size: "medium",
-                        speeds: "3x7",
-                        price: {
-                            hour: "50",
-                            day: "200",
-                            week: "500",
-                            month: "1500"
-                        }, 
-                        available:"yes"
-                    }
-                ]
-        },
-        {
-            place_id: "333333",
-            coords:{lat:55.6880, lng: 12.4390},
-            place_name: "Testing here 3.0",
-            description: "Some text with another text and with more text added to this text and what about that text with these words in it and those letters inside those words",
-            address: "Kastrup", 
-            working_hours:"09:00 - 16:00", 
-            nr_bikes: "10",
-            owner_name: "Michel Stevensen",
-            phone_nr: "99999999"
-        }
-    ];
-
-    */
-
     // console.log(`Country => ${country} and city => ${city}`);
-    let response = await fetch(`http://localhost:8080/getData/${country}/${city}`);
+    let response = await fetch(`${base_url}/getData/${country}/${city}`);
     let data = await response.json()
     return data.data;
     
@@ -636,7 +494,7 @@ async function display_chat(place_id) {
     messageForm = await document.querySelector(".message_form");
     messageBox = await document.querySelector(".messages_history");
     
-    socket =  io.connect('http://localhost:8080',{ query: `place_id=${place_id}` });
+    socket =  io.connect(base_url,{ query: `place_id=${place_id}` });
     socket.on("chat message", function (data) {
         while (messageBox.firstChild) {
             messageBox.removeChild(messageBox.firstChild);
