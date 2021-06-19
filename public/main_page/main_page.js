@@ -48,7 +48,7 @@ function hideLocations()  {
 
     const URL = window.location.href;
     //console.log(URL);
-    if (URL.localeCompare('http://localhost:8080/') !== 0){
+    if (URL.localeCompare('http://nodeexamproject-env.eba-tkgknw3b.us-east-1.elasticbeanstalk.com/') !== 0){
         
         // console.log("checking url");
         document.getElementById("locations").style.visibility="hidden";  

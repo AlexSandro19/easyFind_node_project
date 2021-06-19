@@ -12,7 +12,7 @@ body {
 }
 
 #main-content{
-  min-height: calc(100vh - 106px);
+  min-height: calc(100vh - 108px);
 }
 
 .nav-bar > ul li:hover {
