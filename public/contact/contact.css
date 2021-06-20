@@ -1,43 +1,48 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: center
-}
-
-#contact {
+    justify-content: center;
+  }
+  
+  #main-content-contact {
+    min-height: calc(100vh - 72px);
+  }
+  
+  #contact {
     margin: 2rem auto;
     max-width: 700px;
     background-color: #f7fafc;
     padding: 18px;
     border-radius: 6px;
     box-shadow: 0 2px 4px 0 rgb(14 30 37 / 12%);
-}
-
-.form_contact {
+  }
+  
+  .form_contact {
     display: block;
     text-align: center;
-}
-
-#contact-button {
+  }
+  
+  #contact-button {
     padding: 10px 24px;
     color: white;
-    background-color: #4CAF50;
+    background-color: #4caf50;
     font-size: 16px;
     border-radius: 8px;
     margin-top: -10px;
     margin-left: auto;
     margin-right: auto;
     margin-left: 170px;
-}
-
-#contact-button:hover {
+  }
+  
+  #contact-button:hover {
     background-color: white;
-    color: #4CAF50;
-    border: 2px solid #4CAF50;
-}
-
-#contact > h1 {
+    color: #4caf50;
+    border: 2px solid #4caf50;
+  }
+  
+  #contact > h1 {
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
-}
+  }
+  

@@ -8,7 +8,6 @@ body {
   background-size: cover;
   background-position: center center;
   height: 100vh;
-  
 }
 
 .nav-bar {
@@ -17,8 +16,6 @@ body {
   float: right;
   margin-left: auto;
   margin-right: auto;
-  
-  
 }
 .nav-bar ul {
   list-style: none;
@@ -60,13 +57,11 @@ body {
 .nav-city {
   color: #fff;
   text-decoration: none;
-  
 }
 
 .nav-section {
   color: #fff;
   text-decoration: none;
-  
 }
 
 #logo {
@@ -76,11 +71,11 @@ body {
 }
 
 .main-content {
-    clear: both;
+  clear: both;
 }
 
 #website-name {
-  width: calc(100vw - 706px);
+  width: calc(100vw - 707px);
 
   text-transform: none;
 }

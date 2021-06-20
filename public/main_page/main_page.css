@@ -11,7 +11,7 @@ body {
   background: hsl(33, 100%, 98%);
 }
 
-#main-content{
+#main-content-main-page {
   min-height: calc(100vh - 94px);
 }
 
@@ -131,7 +131,6 @@ body {
 .message_form_button {
   padding: 5px;
 }
-
 
 #places {
   text-align: center;
