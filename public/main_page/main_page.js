@@ -1,5 +1,5 @@
 const base_url = 'http://nodeexamproject-env.eba-tkgknw3b.us-east-1.elasticbeanstalk.com'
-//const base_url = 'http://localhost:8080'
+// const base_url = 'http://localhost:8080'
 
 // Variables to display the map and contents on it
 let map;

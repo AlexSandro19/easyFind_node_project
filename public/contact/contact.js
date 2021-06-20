@@ -1,5 +1,5 @@
 const base_url = 'http://nodeexamproject-env.eba-tkgknw3b.us-east-1.elasticbeanstalk.com/'
-//const base_url = 'http://localhost:8080'
+// const base_url = 'http://localhost:8080'
 
 function hideLocations()  {  
 
@@ -13,4 +13,8 @@ function hideLocations()  {
     // if (window.location.href)
     // document.getElementById("cont1").style.visibility="hidden";  
     // document.getElementById("cont2").style.visibility="hidden";   
+ }
+
+ function messageSent() {
+     alert("Message was sent!");
  }
