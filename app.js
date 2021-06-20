@@ -22,6 +22,7 @@ const footer = fs.readFileSync(__dirname + "/public/footer/footer.html", "utf-8"
 const main_page = fs.readFileSync(__dirname + "/public/main_page/main_page.html", "utf-8");
 const contact = fs.readFileSync(__dirname + "/public/contact/contact.html", "utf-8");
 
+
 //All the routes
 app.get("/", (req, res) => {
     res.send(header + main_page + footer);
@@ -40,6 +41,7 @@ app.post("/contact", (req, res) => {
 
 
 app.get("/getData/:country/:city", (req, res) => {
+
   let requested_city = undefined; 
   countries.forEach( country => {
     let possible_cities = country.cities; 
@@ -74,6 +76,7 @@ server.listen(PORT, (error) => {
 
 // Function to work with email
 async function sendEmailTo(response){
+  console.log(response);
   const user = process.env.EMAIL_USERNAME;
   const pass = process.env.EMAIL_PASSWORD;
   let transporter = nodemailer.createTransport({
@@ -95,19 +98,19 @@ async function sendEmailTo(response){
   });
 
   let you = await transporter.sendMail({
-      from: response.email, // sender address
+      from: user, // sender address
       to: user, // list of receivers
       subject: response.subject, // Subject line
-      text: response.message, // plain text body
-      html: `<p>${response.message}</p>`
+      text: `Email from: ${response.email} \n${response.message}`, // plain text body
+      html: `<p>Message: ${response.message}</p>`
   });
 
-  // console.log(contacter);
-  // console.log(you);
+  console.log(contacter);
+  console.log(you);
 
-  // console.log("Message sent: %s", contacter.messageId);
-  // console.log("Message sent: %s", you.messageId);
-  // //Example:  Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+  console.log("Message sent: %s", contacter.messageId);
+  console.log("Message sent: %s", you.messageId);
+  //Example:  Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 
 }
 
